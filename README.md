@@ -26,6 +26,6 @@ pip install pillow <br/>
 python manage.py makemigrations user_info <br/>
 python manage.py migrate <br/>
 
-# To run the project
+# For running the project
 
 python manage.py runserver <br/>
