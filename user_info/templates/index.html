@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body_block %}
+{% csrf_token %}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to the Dashboard !</h1>
+    {% if user.is_authenticated %}
+      <div class="details" align = "center"> 
+        <img src="{{image.url}}" style="border-radius: 50%; width: 200px;"/>
+        <h2>Full Name: {{ name }}</h2>
+        <h2>Date of Birth:{{ dob }}</h2>
+        <h2>Contact:{{ phone }}</h2>
+        <h2>Email :{{ email }}</h2>
+        <h2>Passport Number:{{ passport_num }}</h2>
+      </div>
+    {% else %}
+        <h2>Register or Login if you'd like to</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
